@@ -18,6 +18,11 @@
 		8405B4101809CDBC004C2769 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8405B40F1809CDBC004C2769 /* Default-568h@2x.png */; };
 		8405B4131809CDBC004C2769 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8405B4111809CDBC004C2769 /* MainStoryboard.storyboard */; };
 		8405B4161809CDBC004C2769 /* RSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8405B4151809CDBC004C2769 /* RSViewController.m */; };
+		8405B41E1809FDA0004C2769 /* RSAddRecoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8405B41D1809FDA0004C2769 /* RSAddRecoViewController.m */; };
+		84200903180A0D710011003F /* RSReco.m in Sources */ = {isa = PBXBuildFile; fileRef = 84200902180A0D710011003F /* RSReco.m */; };
+		84200906180A18530011003F /* RSRecoDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84200905180A18530011003F /* RSRecoDataController.m */; };
+		8420090C180A375C0011003F /* RSAllRecoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8420090B180A375C0011003F /* RSAllRecoTableViewController.m */; };
+		8420090F180A3A1E0011003F /* RSShowRecoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8420090E180A3A1E0011003F /* RSShowRecoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +42,16 @@
 		8405B4121809CDBC004C2769 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		8405B4141809CDBC004C2769 /* RSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSViewController.h; sourceTree = "<group>"; };
 		8405B4151809CDBC004C2769 /* RSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSViewController.m; sourceTree = "<group>"; };
+		8405B41C1809FDA0004C2769 /* RSAddRecoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSAddRecoViewController.h; sourceTree = "<group>"; };
+		8405B41D1809FDA0004C2769 /* RSAddRecoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSAddRecoViewController.m; sourceTree = "<group>"; };
+		84200901180A0D710011003F /* RSReco.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSReco.h; sourceTree = "<group>"; };
+		84200902180A0D710011003F /* RSReco.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSReco.m; sourceTree = "<group>"; };
+		84200904180A18530011003F /* RSRecoDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSRecoDataController.h; sourceTree = "<group>"; };
+		84200905180A18530011003F /* RSRecoDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSRecoDataController.m; sourceTree = "<group>"; };
+		8420090A180A375C0011003F /* RSAllRecoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSAllRecoTableViewController.h; sourceTree = "<group>"; };
+		8420090B180A375C0011003F /* RSAllRecoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSAllRecoTableViewController.m; sourceTree = "<group>"; };
+		8420090D180A3A1E0011003F /* RSShowRecoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSShowRecoViewController.h; sourceTree = "<group>"; };
+		8420090E180A3A1E0011003F /* RSShowRecoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSShowRecoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,11 +98,11 @@
 		8405B3FF1809CDBC004C2769 /* RecoSaver */ = {
 			isa = PBXGroup;
 			children = (
+				84200909180A31560011003F /* ViewControllers */,
+				84200907180A313A0011003F /* Model */,
 				8405B4081809CDBC004C2769 /* RSAppDelegate.h */,
 				8405B4091809CDBC004C2769 /* RSAppDelegate.m */,
 				8405B4111809CDBC004C2769 /* MainStoryboard.storyboard */,
-				8405B4141809CDBC004C2769 /* RSViewController.h */,
-				8405B4151809CDBC004C2769 /* RSViewController.m */,
 				8405B4001809CDBC004C2769 /* Supporting Files */,
 			);
 			path = RecoSaver;
@@ -105,6 +120,32 @@
 				8405B40F1809CDBC004C2769 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		84200907180A313A0011003F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				84200904180A18530011003F /* RSRecoDataController.h */,
+				84200905180A18530011003F /* RSRecoDataController.m */,
+				84200901180A0D710011003F /* RSReco.h */,
+				84200902180A0D710011003F /* RSReco.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		84200909180A31560011003F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8405B41C1809FDA0004C2769 /* RSAddRecoViewController.h */,
+				8405B41D1809FDA0004C2769 /* RSAddRecoViewController.m */,
+				8405B4141809CDBC004C2769 /* RSViewController.h */,
+				8405B4151809CDBC004C2769 /* RSViewController.m */,
+				8420090A180A375C0011003F /* RSAllRecoTableViewController.h */,
+				8420090B180A375C0011003F /* RSAllRecoTableViewController.m */,
+				8420090D180A3A1E0011003F /* RSShowRecoViewController.h */,
+				8420090E180A3A1E0011003F /* RSShowRecoViewController.m */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,8 +216,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8405B4061809CDBC004C2769 /* main.m in Sources */,
+				84200906180A18530011003F /* RSRecoDataController.m in Sources */,
 				8405B40A1809CDBC004C2769 /* RSAppDelegate.m in Sources */,
+				8420090F180A3A1E0011003F /* RSShowRecoViewController.m in Sources */,
+				8420090C180A375C0011003F /* RSAllRecoTableViewController.m in Sources */,
 				8405B4161809CDBC004C2769 /* RSViewController.m in Sources */,
+				84200903180A0D710011003F /* RSReco.m in Sources */,
+				8405B41E1809FDA0004C2769 /* RSAddRecoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +311,7 @@
 				GCC_PREFIX_HEADER = "RecoSaver/RecoSaver-Prefix.pch";
 				INFOPLIST_FILE = "RecoSaver/RecoSaver-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -276,6 +323,7 @@
 				GCC_PREFIX_HEADER = "RecoSaver/RecoSaver-Prefix.pch";
 				INFOPLIST_FILE = "RecoSaver/RecoSaver-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -299,6 +347,7 @@
 				8405B41B1809CDBC004C2769 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
