@@ -7,12 +7,17 @@
 //
 
 #import "RSAppDelegate.h"
+#import <Parse/Parse.h>
 
 @implementation RSAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [Parse setApplicationId:@"94xGER0hkpxl0gEvO6UGZV6KPIVHa2eBXRYKzShO"
+                  clientKey:@"CXGIc0nHcFNRk8h5H2grESqQBPdn7H7rOyStWIgE"];
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+  
     return YES;
 }
 							
