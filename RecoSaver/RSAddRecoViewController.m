@@ -45,7 +45,7 @@
         if (self.NameTextField.text.length) {
             _reco = [RSReco object];
             _reco.name = _NameTextField.text;
-            _reco.recoDescription = _DescriptionTextField.text;
+            _reco.recoDescription = _DescriptionTextView.text;
             _reco.location = _LocationTextField.text;
             _reco.recommendedBy = _RecommendedByTextField.text;
             _reco.user = [PFUser currentUser];

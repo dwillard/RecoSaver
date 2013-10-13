@@ -211,6 +211,7 @@
                     </navigationItem>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="DescriptionTextView" destination="bHu-sb-K0i" id="kNc-yE-M3i"/>
                         <outlet property="LocationTextField" destination="aa9-Jp-P2O" id="SNW-vu-gp6"/>
                         <outlet property="NameTextField" destination="Kiy-ov-3Tc" id="zZ3-Xu-gdh"/>
                         <outlet property="RecommendedByTextField" destination="Nsf-cn-87l" id="3Tn-jD-8ut"/>

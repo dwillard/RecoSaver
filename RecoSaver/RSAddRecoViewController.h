@@ -15,7 +15,7 @@
 @property (strong, nonatomic) RSReco *reco;
 
 @property (weak, nonatomic) IBOutlet UITextField *NameTextField;
-@property (weak, nonatomic) IBOutlet UITextField *DescriptionTextField;
+@property (weak, nonatomic) IBOutlet UITextView *DescriptionTextView;
 @property (weak, nonatomic) IBOutlet UITextField *LocationTextField;
 @property (weak, nonatomic) IBOutlet UITextField *RecommendedByTextField;
 
