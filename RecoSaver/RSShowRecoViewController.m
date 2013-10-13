@@ -45,6 +45,7 @@
 }
 
 - (void) configureView {
+    // only configure if there is a reco
     if (_reco) {
         self.nameLabel.text          = _reco.name;
         self.descriptionLabel.text   = _reco.description;
