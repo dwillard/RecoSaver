@@ -13,7 +13,6 @@
 #import "RSAddRecoViewController.h"
 
 @interface RSAllRecoTableViewController ()
-
 @end
 
 @implementation RSAllRecoTableViewController
