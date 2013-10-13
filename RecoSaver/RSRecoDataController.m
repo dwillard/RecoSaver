@@ -10,7 +10,6 @@
 #import "RSReco.h"
 
 @interface RSRecoDataController ()
-- (void) initDefaultRecoArray;
 @end
 
 @implementation RSRecoDataController
@@ -19,16 +18,10 @@
     
     self = [super init];
     if (self) {
-        [self initDefaultRecoArray];
+        _recoArray = [NSMutableArray new];
         return self;
     }
     return nil;
-}
-
-- (void) initDefaultRecoArray {
-    _recoArray = [NSMutableArray new];
-    RSReco *reco = [[RSReco alloc] initWithName:@"Barrones" description:@"Nice little café with outdoorsy seating" location:@"Menlo Park, CA" recommendedBy:@"Bebu"];
-    [self addRecoArrayObject:reco];
 }
 
 - (void) setRecoArray:(NSMutableArray *)recoArray {

@@ -7,14 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Parse/Parse.h>
 
-@interface RSReco : NSObject
+@interface RSReco : PFObject<PFSubclassing>
+
++ (NSString *)parseClassName;
 
 @property (nonatomic, copy) NSString *name;
-@property (nonatomic, copy) NSString *description;
+@property (nonatomic, copy) NSString *recoDescription;
 @property (nonatomic, copy) NSString *location;
 @property (nonatomic, copy) NSString *recommendedBy;
-
-- (id)initWithName:(NSString *)name description:(NSString *)description location:(NSString *)location recommendedBy:(NSString *)recommendedBy;
+@property (nonatomic, weak) PFUser *user;
 
 @end

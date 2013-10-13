@@ -47,8 +47,9 @@
 - (void) configureView {
     // only configure if there is a reco
     if (_reco) {
+        NSLog(@"%@", _reco.recoDescription);
         self.nameLabel.text          = _reco.name;
-        self.descriptionLabel.text   = _reco.description;
+        self.descriptionLabel.text   = _reco.recoDescription;
         self.locationLabel.text      = _reco.location;
         self.recommendedByLabel.text = _reco.recommendedBy;
     }

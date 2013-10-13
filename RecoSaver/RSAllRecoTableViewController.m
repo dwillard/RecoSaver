@@ -39,6 +39,16 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+  
+    PFQuery *query = [RSReco query];
+    [query whereKey:@"user" equalTo:[PFUser currentUser]];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+      if (!error) {
+          _dataController.recoArray = [objects mutableCopy];
+          [[self tableView] reloadData];
+      }
+    }];
+  
 }
 
 - (void)didReceiveMemoryWarning

@@ -8,15 +8,23 @@
 
 #import "RSAppDelegate.h"
 #import <Parse/Parse.h>
+#import "RSReco.h"
 
 @implementation RSAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+
+    [RSReco registerSubclass];
     [Parse setApplicationId:@"94xGER0hkpxl0gEvO6UGZV6KPIVHa2eBXRYKzShO"
                   clientKey:@"CXGIc0nHcFNRk8h5H2grESqQBPdn7H7rOyStWIgE"];
+
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+  
+    [PFUser enableAutomaticUser];
+    [[PFUser currentUser] incrementKey:@"RunCount"];
+    [[PFUser currentUser] saveInBackground];
   
     return YES;
 }

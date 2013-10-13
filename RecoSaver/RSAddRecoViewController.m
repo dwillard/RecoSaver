@@ -41,15 +41,17 @@
 }
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    NSLog(@"preparing for segue in AddRecoVC");
-    NSLog(@"segue id: %@", segue.identifier);
     if ([[segue identifier] isEqualToString:@"createdNewReco"]) {
-        NSLog(@"ran createdNewSegue");
         if (self.NameTextField.text.length) {
-            _reco = [[RSReco alloc] initWithName:_NameTextField.text
-                                     description:_DescriptionTextField.text
-                                        location:_LocationTextField.text
-                                   recommendedBy:_RecommendedByTextField.text];
+            _reco = [RSReco object];
+            _reco.name = _NameTextField.text;
+            _reco.recoDescription = _DescriptionTextField.text;
+            _reco.location = _LocationTextField.text;
+            _reco.recommendedBy = _RecommendedByTextField.text;
+            _reco.user = [PFUser currentUser];
+            
+            [_reco save];
+            //[_reco saveEventually];
         }
     }
 }

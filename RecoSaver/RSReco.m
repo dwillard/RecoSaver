@@ -7,19 +7,18 @@
 //
 
 #import "RSReco.h"
+#import <Parse/PFObject+Subclass.h>
 
 @implementation RSReco
 
-- (id)initWithName:(NSString *)name description:(NSString *)description location:(NSString *)location recommendedBy:(NSString *)recommendedBy {
-    self = [super init];
-    if (self) {
-        _name = name;
-        _description = description;
-        _location = location;
-        _recommendedBy = recommendedBy;
-        return self;
-    }
-    return nil;
+@dynamic name;
+@dynamic recoDescription;
+@dynamic location;
+@dynamic recommendedBy;
+@dynamic user;
+
++ (NSString *)parseClassName {
+  return @"RSReco";
 }
 
 @end
