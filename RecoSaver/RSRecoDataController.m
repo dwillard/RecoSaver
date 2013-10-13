@@ -10,9 +10,7 @@
 #import "RSReco.h"
 
 @interface RSRecoDataController ()
-
 - (void) initDefaultRecoArray;
-
 @end
 
 @implementation RSRecoDataController
