@@ -24,7 +24,8 @@
 		84200906180A18530011003F /* RSRecoDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84200905180A18530011003F /* RSRecoDataController.m */; };
 		8420090C180A375C0011003F /* RSAllRecoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8420090B180A375C0011003F /* RSAllRecoTableViewController.m */; };
 		8420090F180A3A1E0011003F /* RSShowRecoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8420090E180A3A1E0011003F /* RSShowRecoViewController.m */; };
-		F2714D4C180B380000E1473B /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2714D4B180B380000E1473B /* Parse.framework */; };
+		849FA737180E43B500F4D0B0 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849FA736180E43B500F4D0B0 /* Parse.framework */; };
+		849FA738180E4D3600F4D0B0 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2714D5B180B3A7500E1473B /* StoreKit.framework */; };
 		F2714D4E180B383300E1473B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2714D4D180B383300E1473B /* AudioToolbox.framework */; };
 		F2714D50180B383B00E1473B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2714D4F180B383B00E1473B /* CFNetwork.framework */; };
 		F2714D52180B384900E1473B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2714D51180B384900E1473B /* CoreLocation.framework */; };
@@ -32,7 +33,6 @@
 		F2714D56180B385C00E1473B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2714D55180B385C00E1473B /* MobileCoreServices.framework */; };
 		F2714D58180B3A1E00E1473B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2714D57180B3A1E00E1473B /* QuartzCore.framework */; };
 		F2714D5A180B3A2500E1473B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2714D59180B3A2500E1473B /* Security.framework */; };
-		F2714D5C180B3A7500E1473B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2714D5B180B3A7500E1473B /* StoreKit.framework */; };
 		F2714D5E180B3A7E00E1473B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2714D5D180B3A7E00E1473B /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,7 +64,7 @@
 		8420090B180A375C0011003F /* RSAllRecoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSAllRecoTableViewController.m; sourceTree = "<group>"; };
 		8420090D180A3A1E0011003F /* RSShowRecoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSShowRecoViewController.h; sourceTree = "<group>"; };
 		8420090E180A3A1E0011003F /* RSShowRecoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSShowRecoViewController.m; sourceTree = "<group>"; };
-		F2714D4B180B380000E1473B /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		849FA736180E43B500F4D0B0 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = SOURCE_ROOT; };
 		F2714D4D180B383300E1473B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		F2714D4F180B383B00E1473B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		F2714D51180B384900E1473B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -81,19 +81,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				849FA738180E4D3600F4D0B0 /* StoreKit.framework in Frameworks */,
 				F2714D5E180B3A7E00E1473B /* SystemConfiguration.framework in Frameworks */,
-				F2714D5C180B3A7500E1473B /* StoreKit.framework in Frameworks */,
 				F2714D5A180B3A2500E1473B /* Security.framework in Frameworks */,
 				F2714D58180B3A1E00E1473B /* QuartzCore.framework in Frameworks */,
 				F2714D56180B385C00E1473B /* MobileCoreServices.framework in Frameworks */,
 				F2714D54180B385200E1473B /* libz.1.1.3.dylib in Frameworks */,
+				849FA737180E43B500F4D0B0 /* Parse.framework in Frameworks */,
 				F2714D52180B384900E1473B /* CoreLocation.framework in Frameworks */,
 				8405B3FE1809CDBC004C2769 /* CoreGraphics.framework in Frameworks */,
 				F2714D50180B383B00E1473B /* CFNetwork.framework in Frameworks */,
 				F2714D4E180B383300E1473B /* AudioToolbox.framework in Frameworks */,
 				8405B3FA1809CDBC004C2769 /* UIKit.framework in Frameworks */,
 				8405B3FC1809CDBC004C2769 /* Foundation.framework in Frameworks */,
-				F2714D4C180B380000E1473B /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,6 +120,7 @@
 		8405B3F81809CDBC004C2769 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				849FA736180E43B500F4D0B0 /* Parse.framework */,
 				F2714D5D180B3A7E00E1473B /* SystemConfiguration.framework */,
 				F2714D5B180B3A7500E1473B /* StoreKit.framework */,
 				F2714D59180B3A2500E1473B /* Security.framework */,
@@ -129,7 +130,6 @@
 				F2714D51180B384900E1473B /* CoreLocation.framework */,
 				F2714D4F180B383B00E1473B /* CFNetwork.framework */,
 				F2714D4D180B383300E1473B /* AudioToolbox.framework */,
-				F2714D4B180B380000E1473B /* Parse.framework */,
 				8405B3F91809CDBC004C2769 /* UIKit.framework */,
 				8405B3FB1809CDBC004C2769 /* Foundation.framework */,
 				8405B3FD1809CDBC004C2769 /* CoreGraphics.framework */,
@@ -355,7 +355,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/savil/Documents/code/personal/RecoSaver,
+					.,
+					"/Users/diana/Desktop/Projects/10\\ -\\ RecoSaver/RecoSaver",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RecoSaver/RecoSaver-Prefix.pch";
@@ -371,10 +372,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					/Users/savil/Documents/code/personal/RecoSaver,
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RecoSaver/RecoSaver-Prefix.pch";
 				INFOPLIST_FILE = "RecoSaver/RecoSaver-Info.plist";
