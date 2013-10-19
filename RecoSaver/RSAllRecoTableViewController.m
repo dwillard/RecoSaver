@@ -11,6 +11,7 @@
 #import "RSRecoDataController.h"
 #import "RSShowRecoViewController.h"
 #import "RSAddRecoViewController.h"
+#import "RSTitleLabel.h"
 
 @interface RSAllRecoTableViewController ()
 @end
@@ -48,7 +49,13 @@
           [[self tableView] reloadData];
       }
     }];
-  
+
+    // Customize the navbar title
+
+    RSTitleLabel *label = [[RSTitleLabel alloc] initWithFrame:CGRectZero];
+    label.text = @"R E X";
+    self.navigationItem.titleView = label;
+    [label sizeToFit];
 }
 
 - (void)didReceiveMemoryWarning
@@ -78,7 +85,8 @@
     
     // Configure the cell...
     RSReco *reco = [_dataController objectInRecoArrayAtIndex:indexPath.row];
-    [[cell textLabel] setText:reco.name];
+    [cell.textLabel setText: reco.name];
+    [cell.textLabel setFont: [UIFont fontWithName:@"Futura-CondensedMedium" size:20]];
     return cell;
 }
 

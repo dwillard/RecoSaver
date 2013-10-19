@@ -24,6 +24,7 @@
 		84200906180A18530011003F /* RSRecoDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84200905180A18530011003F /* RSRecoDataController.m */; };
 		8420090C180A375C0011003F /* RSAllRecoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8420090B180A375C0011003F /* RSAllRecoTableViewController.m */; };
 		8420090F180A3A1E0011003F /* RSShowRecoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8420090E180A3A1E0011003F /* RSShowRecoViewController.m */; };
+		8428AAC71813055F0076CDFE /* RSTitleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8428AAC61813055F0076CDFE /* RSTitleLabel.m */; };
 		849FA737180E43B500F4D0B0 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849FA736180E43B500F4D0B0 /* Parse.framework */; };
 		849FA738180E4D3600F4D0B0 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2714D5B180B3A7500E1473B /* StoreKit.framework */; };
 		F2714D4E180B383300E1473B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2714D4D180B383300E1473B /* AudioToolbox.framework */; };
@@ -64,6 +65,8 @@
 		8420090B180A375C0011003F /* RSAllRecoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSAllRecoTableViewController.m; sourceTree = "<group>"; };
 		8420090D180A3A1E0011003F /* RSShowRecoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSShowRecoViewController.h; sourceTree = "<group>"; };
 		8420090E180A3A1E0011003F /* RSShowRecoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSShowRecoViewController.m; sourceTree = "<group>"; };
+		8428AAC51813055F0076CDFE /* RSTitleLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSTitleLabel.h; sourceTree = "<group>"; };
+		8428AAC61813055F0076CDFE /* RSTitleLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSTitleLabel.m; sourceTree = "<group>"; };
 		849FA736180E43B500F4D0B0 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = SOURCE_ROOT; };
 		F2714D4D180B383300E1473B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		F2714D4F180B383B00E1473B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -140,6 +143,7 @@
 		8405B3FF1809CDBC004C2769 /* RecoSaver */ = {
 			isa = PBXGroup;
 			children = (
+				8428AAC4181305110076CDFE /* Views */,
 				84200909180A31560011003F /* ViewControllers */,
 				84200907180A313A0011003F /* Model */,
 				8405B4081809CDBC004C2769 /* RSAppDelegate.h */,
@@ -189,6 +193,15 @@
 				8420090E180A3A1E0011003F /* RSShowRecoViewController.m */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		8428AAC4181305110076CDFE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8428AAC51813055F0076CDFE /* RSTitleLabel.h */,
+				8428AAC61813055F0076CDFE /* RSTitleLabel.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,6 +280,7 @@
 				8405B4161809CDBC004C2769 /* RSViewController.m in Sources */,
 				84200903180A0D710011003F /* RSReco.m in Sources */,
 				8405B41E1809FDA0004C2769 /* RSAddRecoViewController.m in Sources */,
+				8428AAC71813055F0076CDFE /* RSTitleLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

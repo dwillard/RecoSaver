@@ -8,6 +8,7 @@
 
 #import "RSAddRecoViewController.h"
 #import "RSReco.h"
+#import "RSTitleLabel.h"
 
 @interface RSAddRecoViewController ()
 @end
@@ -26,7 +27,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	  // Do any additional setup after loading the view.
+
+    
+    RSTitleLabel *label = [[RSTitleLabel alloc] initWithFrame:CGRectZero];
+    label.text = @"A D D";
+    self.navigationItem.titleView = label;
+    [label sizeToFit];
 }
 
 - (void)didReceiveMemoryWarning
