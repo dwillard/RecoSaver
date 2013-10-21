@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @class RSRecoDataController;
+@class RSReco;
 
 @interface RSAllRecoTableViewController : UITableViewController
 
@@ -16,5 +17,7 @@
 
 - (IBAction)done:(UIStoryboardSegue *)segue;
 - (IBAction)cancel:(UIStoryboardSegue *)segue;
+
+- (void) handleRecoDeletion:(RSReco *)reco;
 
 @end

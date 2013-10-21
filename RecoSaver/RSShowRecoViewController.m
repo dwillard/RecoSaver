@@ -44,14 +44,23 @@
     }
 }
 
-- (void) configureView {
+- (void)configureView {
     // only configure if there is a reco
-    if (_reco) {
+    if (_reco) {    
         self.nameLabel.text          = [_reco.name uppercaseString];
         self.descriptionLabel.text   = _reco.recoDescription;
         self.locationLabel.text      = [NSString stringWithFormat:@"Location: %@", _reco.location];
         self.recommendedByLabel.text = [NSString stringWithFormat:@"Recommended by: %@", _reco.recommendedBy];
     }
+}
+
+-(IBAction)deleteReco:(id) sender {
+    NSLog(@"pressed delete");
+    if ([_delegate respondsToSelector:@selector(handleRecoDeletion:)]) {
+        [_delegate performSelectorOnMainThread:@selector(handleRecoDeletion:) withObject:_reco waitUntilDone:NO];
+    }
+    
+    
 }
 
 @end

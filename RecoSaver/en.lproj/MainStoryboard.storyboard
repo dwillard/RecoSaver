@@ -74,7 +74,7 @@
                                         <color key="textColor" red="0.13333334029999999" green="0.73725491759999995" blue="0.83137261870000001" alpha="1" colorSpace="deviceRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Big Description" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="229" translatesAutoresizingMaskIntoConstraints="NO" id="Ald-vc-fJy">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Big Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="229" translatesAutoresizingMaskIntoConstraints="NO" id="Ald-vc-fJy">
                                         <rect key="frame" x="20" y="88" width="229" height="58"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -82,7 +82,7 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ID-jj-7a1">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="229" translatesAutoresizingMaskIntoConstraints="NO" id="1ID-jj-7a1">
                                         <rect key="frame" x="20" y="172" width="229" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -113,11 +113,15 @@
                         <color key="backgroundColor" red="0.9450981021" green="0.93725496529999996" blue="0.90588241820000004" alpha="1" colorSpace="deviceRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="Sv1-TO-qoW">
-                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="yRH-y6-B4x">
+                        <barButtonItem key="rightBarButtonItem" title="DELETE" id="yRH-y6-B4x">
                             <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="deleteReco:" destination="yzZ-Ve-aDt" id="Rnb-gH-f8g"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="deleteButton" destination="yRH-y6-B4x" id="aSn-iw-Sb1"/>
                         <outlet property="descriptionLabel" destination="Ald-vc-fJy" id="n6h-2N-i6g"/>
                         <outlet property="locationLabel" destination="1ID-jj-7a1" id="4db-ez-2dO"/>
                         <outlet property="nameLabel" destination="bDu-ek-zyi" id="Pvc-rq-CvD"/>
@@ -203,13 +207,13 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Add" id="0oU-KJ-prp">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="1Kc-vE-Hig">
+                        <barButtonItem key="leftBarButtonItem" title="CANCEL" id="1Kc-vE-Hig">
                             <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="ZX2-D8-umf" kind="unwind" identifier="cancelNewReco" unwindAction="cancel:" id="Ftm-Lg-qvd"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="4o5-Xg-qPE">
+                        <barButtonItem key="rightBarButtonItem" title="DONE" id="4o5-Xg-qPE">
                             <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="ZX2-D8-umf" kind="unwind" identifier="createdNewReco" unwindAction="done:" id="5yv-XW-8tn"/>
@@ -252,6 +256,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ijx-dT-nCM">
                         <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.42352941176470588" green="0.42352941176470588" blue="0.42352941176470588" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="UfS-a6-ZYa" kind="relationship" relationship="rootViewController" id="uLV-Qv-ffs"/>

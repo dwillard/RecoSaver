@@ -51,11 +51,14 @@
     }];
 
     // Customize the navbar title
-
     RSTitleLabel *label = [[RSTitleLabel alloc] initWithFrame:CGRectZero];
     label.text = @"R E X";
     self.navigationItem.titleView = label;
     [label sizeToFit];
+    
+    // Customize the back button for this view controller
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"BACK" style:UIBarButtonItemStyleDone target:nil action:nil];
+    self.navigationItem.backBarButtonItem = backButton;
 }
 
 - (void)didReceiveMemoryWarning
@@ -139,6 +142,7 @@
     // Pass the selected object to the new view controller.
     if ([segue.identifier  isEqual: @"RSShowRecoSegue"]) {
         RSShowRecoViewController *showRecoViewController = segue.destinationViewController;
+        showRecoViewController.delegate = self;
         showRecoViewController.reco = [_dataController objectInRecoArrayAtIndex:[self.tableView indexPathForSelectedRow].row];
     }
 }
@@ -148,7 +152,7 @@
         RSAddRecoViewController *addRecoViewController = segue.sourceViewController;
         if (addRecoViewController.reco) {
             [_dataController addRecoArrayObject:addRecoViewController.reco];
-            [[self tableView] reloadData];
+            [self.tableView reloadData];
         }
         [self dismissViewControllerAnimated:YES completion:nil];
     }
@@ -158,6 +162,14 @@
     if ([[segue identifier] isEqualToString:@"cancelNewReco"]) {
         [self dismissViewControllerAnimated:YES completion:nil];        
     }
+}
+
+- (void) handleRecoDeletion:(RSReco *)reco {
+    
+    NSLog(@"handling deletion");
+    [_dataController removeRecoFromArray:reco];
+    [self.tableView reloadData];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end

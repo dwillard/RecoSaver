@@ -17,5 +17,6 @@
 - (NSUInteger) numRecos;
 - (RSReco *) objectInRecoArrayAtIndex:(NSUInteger)index;
 - (void) addRecoArrayObject:(RSReco *)reco;
+- (void) removeRecoFromArray:(RSReco *)recoToDelete;
 
 @end

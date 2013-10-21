@@ -43,5 +43,15 @@
     [_recoArray addObject:reco];
 }
 
-
+- (void) removeRecoFromArray:(RSReco *)recoToDelete {
+    NSString *recoToDeleteID = recoToDelete.objectId;
+    for (int i = 0; i < _recoArray.count; i++) {
+        RSReco *reco = [_recoArray objectAtIndex:i];
+        if ([reco.objectId isEqualToString:recoToDeleteID]) {
+            [recoToDelete deleteInBackground];
+            [_recoArray removeObjectAtIndex:i];
+            break;
+        }
+    }
+}
 @end
