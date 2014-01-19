@@ -41,6 +41,7 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
   
+
     PFQuery *query = [RSReco query];
     [query whereKey:@"user" equalTo:[PFUser currentUser]];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
@@ -49,6 +50,7 @@
           [[self tableView] reloadData];
       }
     }];
+ 
 
     // Customize the navbar title
     RSTitleLabel *label = [[RSTitleLabel alloc] initWithFrame:CGRectZero];
